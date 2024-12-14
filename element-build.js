@@ -29,6 +29,7 @@ const outputFile = "main.js";
       `${buildFolder}styles.css`,
       `${elementsOutputFolder}/styles.css`,
     );
+    await fs.copyFile(`.netlify/_headers`, `${elementsOutputFolder}/_headers`);
     console.log(
       `Element built and can be found in folder "${elementsOutputFolder}"`,
     );

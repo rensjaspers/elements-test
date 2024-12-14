@@ -3,7 +3,7 @@ const path = require("path");
 const concat = require("concat");
 
 const buildFolder = "./dist/elements-test/browser/"; //end with /
-const outputFile = "hello-world.js";
+const outputFile = "main.js";
 
 (async function build() {
   // Get file list

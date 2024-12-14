@@ -1,0 +1,20 @@
+<dialog #dialog>
+  <h1>Hello {{ title() }}!</h1>
+  <p>This is an Angular component based element.</p>
+  <p>
+    Angular interval signal:
+    {{ interval() }}
+  </p>
+  <h2>Api data retrieval example:</h2>
+  @switch (apiData.status()) {
+    @case (status.Error) {
+      <p>Error: {{ apiData.error() }}</p>
+    }
+    @case (status.Resolved) {
+      <pre>{{ apiData.value() | json }}</pre>
+    }
+    @case (status.Loading) {
+      <p>Loading...</p>
+    }
+  }
+</dialog>
